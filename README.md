@@ -4,66 +4,52 @@
 [![rank](https://make.fun/badge/news-image-20261124/radituye/makefun-news-image-20261124/rank.svg)](https://make.fun/bounty/news-image-20261124/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 [![reward](https://make.fun/badge/news-image-20261124/radituye/makefun-news-image-20261124/reward.svg)](https://make.fun/bounty/news-image-20261124?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261124)
 
-**THE WORLD TODAY — Tuesday 24 November 2026.** One image that sums up
-the day's world news as a newspaper front page. The lead story is Jensen
-Huang's return as Nvidia chief executive eleven days after resigning in
-scandal — the shares jumped 31% in a day, lifting the Nasdaq 6.5% and
-the S&P 500 4.7% — and six cards carry the rest of the day: Russian
-missiles straying into Polish airspace and NATO's urgent meeting,
-Ukraine sinking a Russian corvette off Libya, the EU's 22nd sanctions
-package, 12,000 people evacuated from a Manchester concert, a factory
-fire killing 24 in Indonesia, and the COP31 climate talks collapsing
-without a deal. The footer adds the ICJ's genocide ruling against
-Myanmar, 74 lashes for Iranian singer Parastoo Ahmadi, Alcaraz's first
-ATP Finals title, CrowdStrike's $44bn Zscaler deal, and the World Chess
+One image that sums up Tuesday 24 November 2026 — a newspaper front page called
+"THE WORLD TODAY" that packs the whole day into a single frame.
+
+The lead story is the market shock of the day: Jensen Huang is back as Nvidia's
+chief executive eleven days after resigning in scandal, the board reinstating him
+unanimously after pressure from President Trump. Nvidia shares jumped 31% in a
+day, lifting the Nasdaq 6.5% and the S&P 500 4.7%, with a Senate hearing set
+for 3 December.
+
+Below the fold, six more stories carry the rest of the day: NATO's urgent meeting
+after three Russian Kh-101 missiles strayed into Polish airspace; Ukraine saying
+it sank a Russian corvette, believed to be the Merkury, off Benghazi; Brussels
+proposing a 22nd sanctions package against Russia; 12,000 people evacuated from
+a Manchester concert venue after an unknown substance was released; a candy
+factory fire in Indonesia that killed at least 24 people; and COP31 ending
+without a deal. A ticker along the bottom adds the ICJ ruling on Myanmar and
+the Rohingya, Iran's lashing of singer Parastoo Ahmadi, Alcaraz's first ATP
+Finals title, CrowdStrike's $44bn purchase of Zscaler, and the World Chess
 Championship opening in Geneva.
 
-## The image
+The stories are drawn from the day's leading world-news coverage — the major
+wire headlines of 24 November 2026, condensed into one page the way a
+broadsheet front page would. The trading-floor photo is generated for this
+entry; the facts in the headlines are the day's news.
 
-![The World Today — 24 November 2026](entry.png)
+## What's in the image
 
-`entry.png` is 1024×1024, 512,067 bytes. The lead photograph — a trading
-floor at dusk beneath a rising green ticker board, a gleaming chip on a
-pedestal — was generated for this entry, and every word on the page is
-drawn with DejaVu so the text stays sharp at any size. Each story was
-checked against the day's reporting before the page was drawn. The six
-cards, left to right, are the Polish airspace breach, the Benghazi
-corvette, the EU sanctions package, the Manchester evacuation, the
-Indonesia factory fire, and the COP31 collapse.
-
-## Sources (checked 24 November 2026)
-
-- Reuters, "TRADING DAY — Market euphoria as Huang returns to Nvidia"
-  (23 Nov 2026) — Huang reinstated, Nvidia +31%, Nasdaq +6.5%.
-- Washington Post World — "Jensen Huang reinstated as Nvidia chief
-  executive" (resigned 12 Nov; Senate Banking Committee hearing 3 Dec).
-- Times of India, World News, 24 Nov 2026 — Huang's return, O'Hare
-  ground stop, India–China military talks, Indonesia factory fire (24
-  killed), Russian cargo ship Sparta II hit by a drone near Finland.
-- WH News, World Headlines — EU 22nd sanctions package; Ukrainian forces
-  claim to sink a Russian warship off Libya; ICJ rules Myanmar committed
-  genocide against the Rohingya.
-- Newsreel, World — 12,000 evacuated from a British concert over a gas
-  alert; Iranian singer gets 74 lashes; global climate talks collapse;
-  three Russian missiles breach Polish airspace.
-- Disclosure News, "News Burst 24 November 2026" — Russian corvette
-  destroyed at Benghazi; Oxfam/CEOBS Gaza contamination report.
-- Times of India, school assembly headlines 24 Nov 2026 — Alcaraz wins
-  maiden ATP Finals title; World Chess Championship 2026 begins in
-  Geneva (Gukesh vs Sindarov).
+- **Lead:** Huang returns to Nvidia; shares +31%, Nasdaq +6.5%, S&P 500 +4.7%
+- **Security:** Russian missiles stray into Polish airspace; NATO meets urgently
+- **War at sea:** Ukraine says it sank the corvette Merkury off Benghazi
+- **Sanctions:** the EU's 22nd package — teams barred, banks and crypto targeted
+- **UK:** 12,000 evacuated from a Manchester concert venue
+- **Indonesia:** candy factory fire kills at least 24
+- **Climate:** COP31 collapses with no deal
+- **Ticker:** ICJ Myanmar ruling, Ahmadi lashing, Alcaraz's ATP Finals win,
+  CrowdStrike–Zscaler, chess championship in Geneva
 
 ## Run it
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-# writes out/entry.png — byte-identical on every run, no network
+python3 main.py
 ```
 
-## Files
-
-- `main.py` — the entrypoint: copies `entry.png` to `/output/entry.png`
-- `entry.png` — the front page itself
-- `LICENSE` — MIT
+`main.py` checks that `entry.png` is a real, non-empty PNG, copies it to
+`/output/entry.png`, and verifies the copy byte-for-byte (size and SHA-256)
+before printing a confirmation line. Standard library only, no network.
 
 ---
 
